@@ -1,0 +1,76 @@
+<html>
+
+<head>
+<title>Student Registration</title>
+
+<script type="text/javascript">
+
+function isValid()
+{
+if((document.getElementById('fname').value==''||document.getElementById('fname').value=='Enter your Name')&&(document.getElementById('idno').value==''||document.getElementById('fname').value=='Enter your Name'))
+{alert('Name and ID No. fields are empty');
+return false;
+}
+
+if(document.getElementById('fname').value==''||document.getElementById('fname').value=='Enter your Name')
+{alert('Name field is empty');
+return false;
+}
+
+if(document.getElementById('idno').value==''||document.getElementById('fname').value=='Enter your Name')
+{alert('ID No field is empty');
+return false;
+}
+
+else return true;
+}
+
+function regst()
+{
+alert("You have already Registered!")
+}
+
+</script>
+
+</head>
+
+<body bgcolor="white" onload="regst();">
+<table cellspacing="0" cellpadding="0" align="center">
+	<tr>
+		<td style="padding-top:38px">
+			<img src="logbitso.jpg"/>
+		</td>
+		<td>
+			<img src="bitslogo.jpg" />
+		</td>
+	</tr>
+	<tr height="20px">
+		<td colspan="2">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center">
+			<h1>Student Registration Portal</h1>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center">
+			<form name="Register" method="post" action="registration.php" onsubmit="return isValid();">
+			Name: <input type="text" name="fname" value="Enter your Name" onfocus="this.value=''"/><br/><br/>
+			ID No: <input type="text" name="idno" value="Enter your ID" onfocus="this.value=''"/><br/><br/>
+			<input type="submit" name="Submit" value="Register"> &nbsp &nbsp 
+			<input type="reset" name="Reset" value="Clear"></br>
+			</form>
+		</td>
+	</tr>
+	<tr><td colspan="2"></br></br></td></tr>
+	<tr>
+	<td align="center" colspan="2">
+		<form name="Login">
+		<h3> Aleady Registered?</h3>
+		<input type="button" value="Login" onclick="window.open('login_student.html')"/>&nbsp &nbsp </br>
+	</td>
+	</tr>
+</table>
+</body>
+</html>

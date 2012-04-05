@@ -1,0 +1,129 @@
+<html>
+<head>
+<script type="text/javascript">
+function isValid()
+{
+if((document.getElementById('qtn').value)==''&&(document.getElementById('c_ans').value)==''&& (document.getElementById('qtn').value)==''&& (document.getElementById('c1').value)==''&&(document.getElementById('c2').value)==''&&(document.getElementById('c3').value)==''&&(document.getElementById('c4').value)=='')
+{alert('All fields are empty!');
+document.getElementById('qtn').focus();
+return false;
+}
+
+if((document.getElementById('qtn').value==''))
+{alert('Enter Question');
+document.getElementById('qtn').focus();
+return false;
+}
+
+if((document.getElementById('c_ans').value==''))
+{alert('Enter correct answer');
+document.getElementById('c_ans').focus();
+return false;
+}
+if((document.getElementById('c1').value==''))
+{alert('Enter choice1');
+document.getElementById('c1').focus();
+return false;
+}
+if((document.getElementById('c2').value==''))
+{alert('Enter choice2');
+document.getElementById('c2').focus();
+return false;
+}
+
+if((document.getElementById('c3').value==''))
+{alert('Enter choice3');
+document.getElementById('c3').focus();
+return false;
+}
+if((document.getElementById('c4').value==''))
+{alert('Enter choice4');
+document.getElementById('c4').focus();
+return false;
+
+
+}
+
+else return true;
+}
+
+function Validity()
+{
+if((document.getElementById('qtnid').value==''))
+{alert('Enter Question ID');
+document.getElementById('qtnid').focus();
+return false;
+}
+
+else return true;
+}
+
+</script>
+
+</head>
+<body bgcolor="white">
+
+<table align="center" cellspacing="0" cellpadding="0">
+<tr><td align="center">
+
+			<table align="center" cellspacing="0" cellpadding="0">
+				</tr><td colspan="5"><br/><br/><br/><br/><br/></td></tr>
+				<tr>
+				<td rowspan="8" bgcolor="black"> &nbsp &nbsp &nbsp </td>
+				<td colspan="3" bgcolor="black"><br/></td>
+					<td rowspan="8" bgcolor="black"> &nbsp &nbsp &nbsp  </td></tr>
+				<tr>
+				<td rowspan="6" bgcolor="maroon"> &nbsp &nbsp &nbsp </td> <td bgcolor="maroon"><br/></td> <td rowspan="6" bgcolor="maroon"> &nbsp &nbsp &nbsp </td></tr>
+			<tr>
+				<td><br/><br/><br/><br/></td></tr>
+			<tr>
+				<td align="center"><h1 align="center">  &nbsp &nbsp &nbsp Add new question?  &nbsp &nbsp &nbsp </h1></td></tr>
+			<tr>
+				<td><br/><br/></td></tr>
+			<tr>
+				<td align="center"> <form action="add.php" method='post' onsubmit="return isValid();">
+				Question: &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp <input type="text" value="" name="qtn" id="qtn"><br/><br/>
+				Correct answer: &nbsp <input type="text" value="" name="c_ans" id="c_ans"><br/><br/>
+				Choice1: &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp <input type="text" value="" name="c1" id="c1"><br/><br/>
+				Choice2: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" value="" name="c2" id="c2"><br/><br/>
+				Choice3: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" value="" name="c3" id="c3"><br/><br/>
+				Choice3: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" value="" name="c4" id="c4"><br/><br/>
+				<input type="submit" value="Add"><br/><br/></form></td></tr>
+			<tr>
+				<td bgcolor="maroon"><br/></td></tr>
+			<tr>
+				<td colspan="3" bgcolor="black"><br/></td></tr>
+			</table>
+</td>
+<td> &nbsp &nbsp &nbsp </td>
+<td>
+			<table align="center" cellspacing="0" cellpadding="0">
+				</tr><td colspan="5"><br/><br/><br/><br/><br/></td></tr>
+				<tr>
+				<td rowspan="9" bgcolor="black"> &nbsp &nbsp &nbsp </td>
+				<td colspan="3" bgcolor="black"><br/></td>
+					<td rowspan="9" bgcolor="black"> &nbsp &nbsp &nbsp  </td></tr>
+				<tr>
+				<td rowspan="7" bgcolor="darkblue"> &nbsp &nbsp &nbsp </td> <td bgcolor="darkblue"><br/></td> <td rowspan="7" bgcolor="darkblue"> &nbsp &nbsp &nbsp </td></tr>
+			<tr>
+				<td><br/><br/><br/><br/></td></tr>
+			<tr>
+				<td align="center"><h1 align="center">  &nbsp &nbsp &nbsp Edit an existing question?  &nbsp &nbsp &nbsp </h1></td></tr>
+			<tr>
+				<td><br/><br/></td></tr>
+			<tr>
+				<td align="center"> <form action="edit.php" method='post' onsubmit="Validity();">
+				Enter Question ID: &nbsp <input type="text" value="" name="qtnid" id="qtnid"><br/><br/>
+				<input type="submit" value="Edit!"><br/><br/></form></td></tr>
+		
+			<tr><td align="center"><form action="show_questions.php" >To see all questions <br/><br/> <input type="submit" value="Click here"><br/><br/></td></tr>
+			<tr>	<td bgcolor="darkblue"><br/></td></tr>
+			<tr>
+				<td colspan="3" bgcolor="black"><br/></td></tr>
+			</table>
+</td>
+</tr>
+</table>
+	
+</body>
+</html>
